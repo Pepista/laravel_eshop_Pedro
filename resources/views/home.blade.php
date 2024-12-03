@@ -7,7 +7,7 @@
     <img src="https://imgs.search.brave.com/ko2Q7ZOGLlqvLvF_YRANMCfq0u33Z5RmFO9DCe4WCQw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS81/YTllZTY0MTZlOTBk/MjAwMDFiMjAwMzgv/NjI4OWYwYmZhOTIw/YTk1OGYyYjQxNmY3/X2JsYWNrLWdyYWRp/ZW50LnBuZw" alt="Vítejte" class="object-cover w-full h-full opacity-70">
     <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-50"></div>
     <div class="flex items-center justify-center h-full text-center">
-        <h1 class="text-white text-6xl font-extrabold tracking-tight leading-tight">Vítejte na naší stránce!</h1>
+        
     </div>
 </div>
 
@@ -32,26 +32,7 @@
 </div>
 
 <!-- Products Horizontal Scroll Section -->
-<div class="py-16 bg-gray-100">
-    <h2 class="text-4xl font-semibold text-center text-gray-800">Naše Produkty</h2>
-    <div class="overflow-x-auto mt-8">
-        <div class="flex space-x-6">
-            @foreach($products as $product)
-                <div class="flex-shrink-0 w-64">
-                    <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-all hover:shadow-xl transform hover:scale-105">
-                        <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="object-cover w-full h-48 transition-transform duration-300 hover:scale-110">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800">{{ $product->name }}</h3>
-                            <p class="mt-4 text-gray-500">{{ $product->description }}</p>
-                            <p class="mt-4 font-bold text-gray-900">{{ number_format($product->price, 2) }} Kč</p>
-                            <button class="mt-4 bg-indigo-600 text-white rounded-md px-6 py-2 hover:bg-indigo-700 transition duration-200">Koupit</button>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
-</div>
+@include('components.product-slider');
 
 <!-- Contact Form Section -->
 <div class="py-16 bg-white">
