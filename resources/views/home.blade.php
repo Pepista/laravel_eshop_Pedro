@@ -16,17 +16,29 @@
     <h2 class="text-4xl font-semibold text-gray-800">Proč nakupovat u nás?</h2>
     <p class="mt-4 text-lg text-gray-600">Nabízíme nejlepší produkty za nejlepší ceny!</p>
     <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        <div class="bg-white shadow-xl rounded-lg p-8 transform hover:scale-105 transition-transform duration-300">
-            <h3 class="text-xl font-semibold text-gray-800">Rychlá Doprava</h3>
-            <p class="mt-4 text-gray-600">Zaručujeme rychlé dodání vašich objednávek.</p>
+        <!-- Rychlá Doprava -->
+        <div class="bg-white shadow-xl rounded-lg p-8 transform hover:scale-105 transition-transform duration-300 relative">
+            <div class="flex flex-col items-center justify-center space-y-4">
+                <h3 class="text-xl font-semibold text-gray-800">Rychlá Doprava</h3>
+                <x-heroicon-o-truck height="80px" class="truck-icon my-4"/>
+                <p class="text-gray-600">Zaručujeme rychlé dodání vašich objednávek.</p>
+            </div>
         </div>
+        <!-- Kvalitní Produkty -->
         <div class="bg-white shadow-xl rounded-lg p-8 transform hover:scale-105 transition-transform duration-300">
-            <h3 class="text-xl font-semibold text-gray-800">Kvalitní Produkty</h3>
-            <p class="mt-4 text-gray-600">Naše produkty procházejí důkladným výběrem kvality.</p>
+            <div class="flex flex-col items-center justify-center space-y-4">
+                <h3 class="text-xl font-semibold text-gray-800">Kvalitní Produkty</h3>
+                <x-iconsax-bro-sidebar-right height="80px" class="my-4"/>
+                <p class="text-gray-600">Naše produkty procházejí důkladným výběrem kvality.</p>
+            </div>
         </div>
+        <!-- Zákaznická Podpora -->
         <div class="bg-white shadow-xl rounded-lg p-8 transform hover:scale-105 transition-transform duration-300">
-            <h3 class="text-xl font-semibold text-gray-800">Zákaznická Podpora</h3>
-            <p class="mt-4 text-gray-600">Jsme tu pro vás, abychom zodpověděli všechny vaše dotazy.</p>
+            <div class="flex flex-col items-center justify-center space-y-4">
+                <h3 class="text-xl font-semibold text-gray-800">Zákaznická Podpora</h3>
+                <x-gmdi-support-agent-o height="80px" class="my-4"/>
+                <p class="text-gray-600">Jsme tu pro vás, abychom zodpověděli všechny vaše dotazy.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -35,25 +47,7 @@
 @include('components.product-slider');
 
 <!-- Contact Form Section -->
-<div class="py-16 bg-white">
-    <h2 class="text-4xl font-semibold text-center text-gray-800">Kontaktní formulář</h2>
-    <form class="max-w-lg mx-auto mt-8 p-8 bg-white shadow-lg rounded-lg" action="#" method="POST">
-        @csrf
-        <div class="mb-6">
-            <label for="name" class="block text-sm font-medium text-gray-700">Jméno</label>
-            <input type="text" id="name" name="name" class="border border-gray-300 rounded-md w-full p-4 mt-2" required>
-        </div>
-        <div class="mb-6">
-            <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
-            <input type="email" id="email" name="email" class="border border-gray-300 rounded-md w-full p-4 mt-2" required>
-        </div>
-        <div class="mb-6">
-            <label for="message" class="block text-sm font-medium text-gray-700">Zpráva</label>
-            <textarea id="message" name="message" class="border border-gray-300 rounded-md w-full p-4 mt-2" required></textarea>
-        </div>
-        <button type="submit" class="bg-indigo-600 text-white rounded-md px-6 py-3 hover:bg-indigo-700 transition duration-200 w-full">Odeslat</button>
-    </form>
-</div>
+@include('components.contact-form')
 
 @endsection
 

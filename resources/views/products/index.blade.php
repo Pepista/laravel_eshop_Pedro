@@ -63,4 +63,5 @@
             @endforeach
         </div>
     </div>
+    @include('components.product-slider');
 @endsection
