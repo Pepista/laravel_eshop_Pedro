@@ -11,6 +11,9 @@
     </div>
 </div>
 
+
+
+
 <!-- Why Choose Us Section -->
 <div class="py-16 bg-gray-50 text-center">
     <h2 class="text-4xl font-semibold text-gray-800">Proč nakupovat u nás?</h2>

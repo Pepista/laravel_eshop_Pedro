@@ -9,7 +9,8 @@
         <style>
           
         </style>
-
-    @include('components.contact-form')
+        <div class="position-absolute bottom-0">
+        @include('components.contact-form')
+        </div>
     </div>
 @endsection
