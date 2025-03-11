@@ -79,7 +79,7 @@
         }
     </style>
 </head>
-<body class="font-sans antialiased">
+<body class="antialiased">
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
         <!-- Page transition overlay with "Barvio" text -->
         <div class="page-transition">

@@ -2,8 +2,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container py-10 mx-auto mt-20">
+    <div class="container py-10 mx-auto">
+        <div class="h-16"></div>
         <h1 class="text-3xl font-semibold text-center mb-8 text-white">Naše Produkty</h1>
+
         <!-- Inline Style pro Grid -->
         <style>
             .product-grid {
@@ -13,6 +15,7 @@
                 grid-auto-rows: minmax(300px, auto);
                 justify-items: center;
             }
+
             .product-card {
                 background-color: white;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -24,11 +27,13 @@
                 flex-direction: column;
                 justify-content: space-between;
             }
+
             .product-card img {
                 width: 100%;
                 height: 200px;
                 object-fit: cover;
             }
+
             .product-card .product-description {
                 display: -webkit-box;
                 -webkit-line-clamp: 3;
@@ -36,22 +41,25 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
+
             @media (max-width: 768px) {
                 .product-grid {
                     grid-template-columns: repeat(2, 1fr);
                 }
             }
+
             @media (max-width: 480px) {
                 .product-grid {
                     grid-template-columns: 1fr;
                 }
             }
         </style>
+
         <div class="product-grid">
             @foreach($products as $product)
                 <div class="product-card">
                     <img src="https://via.placeholder.com/300" alt="{{ $product->name }}" class="product-image">
-                    <div class="p-4">
+                    <div class="p-4 text-center">
                         <h2 class="text-xl font-semibold mb-2 text-center">{{ $product->name }}</h2>
                         <p class="text-gray-600 mb-4 product-description">
                             {{ $product->description }}
@@ -63,5 +71,4 @@
             @endforeach
         </div>
     </div>
-    @include('components.product-slider');
 @endsection

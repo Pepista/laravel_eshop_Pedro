@@ -16,7 +16,7 @@
 
 <!-- Why Choose Us Section -->
 <div class="py-16 bg-gray-50 text-center">
-    <h2 class="text-4xl font-semibold text-gray-800">Proč nakupovat u nás?</h2>
+    <h2 class="font-gambetta text-4xl font-semibold text-gray-800">Proč nakupovat u nás?</h2>
     <p class="mt-4 text-lg text-gray-600">Nabízíme nejlepší produkty za nejlepší ceny!</p>
     <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         <!-- Rychlá Doprava -->
