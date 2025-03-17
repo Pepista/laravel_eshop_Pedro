@@ -1,10 +1,15 @@
-<!-- resources/views/products/index.blade.php -->
 @extends('layouts.app')
 
 @section('content')
     <div class="container py-10 mx-auto">
-        <div class="h-16"></div>
-        <h1 class="text-3xl font-semibold text-center mb-8 text-white">Naše Produkty</h1>
+        <div class="flex justify-between items-center mb-8">
+            <!-- Ikona nákupního košíku vpravo nahoře -->
+            <a href="{{ route('cart.index') }}" class="text-white text-2xl hover:text-gray-400">
+                <i class="fas fa-shopping-cart"></i> <!-- Font Awesome ikona -->
+            </a>
+
+            <h1 class="text-3xl font-semibold text-center text-white">Naše Produkty</h1>
+        </div>
 
         <!-- Inline Style pro Grid -->
         <style>
@@ -60,11 +65,11 @@
                 <div class="product-card">
                     <img src="https://via.placeholder.com/300" alt="{{ $product->name }}" class="product-image">
                     <div class="p-4 text-center">
-                        <h2 class="text-xl font-semibold mb-2 text-center">{{ $product->name }}</h2>
+                        <h2 class="text-xl font-semibold mb-2">{{ $product->name }}</h2>
                         <p class="text-gray-600 mb-4 product-description">
                             {{ $product->description }}
                         </p>
-                        <p class="font-bold text-lg text-blue-600 mb-4 text-center">Cena: ${{ $product->price }}</p>
+                        <p class="font-bold text-lg text-blue-600 mb-4">Cena: ${{ $product->price }}</p>
                         <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary inline-block px-6 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition">Zobrazit detaily</a>
                     </div>
                 </div>

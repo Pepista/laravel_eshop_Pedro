@@ -6,6 +6,12 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\CartController;
+
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart/{product}', [CartController::class, 'add'])->name('cart.add');
+Route::delete('/cart/{id}', [CartController::class, 'remove'])->name('cart.remove');
+
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
