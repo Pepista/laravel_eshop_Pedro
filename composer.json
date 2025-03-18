@@ -11,7 +11,8 @@
         "filament/filament": "^3.0-stable",
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9",
-        "saade/blade-iconsax": "^1.2"
+        "saade/blade-iconsax": "^1.2",
+        "tomatophp/filament-ecommerce": "^1.0"
     },
     "require-dev": {
         "backpack/generators": "^4.0",
