@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./fonts.css";
 
 @layer base {
     body {
@@ -12,14 +11,14 @@
 @layer base {
     @font-face {
         font-family: Gambetta-Light ;
-        src: url("/public/fonts/gambetta/Gambetta-Light.ttf") format("ttf");
+        src: url("/public/fonts/gambetta/Gambetta-Light.ttf");
     }
     @font-face {
         font-family: Tanker;
-        src: url("/public/fonts/tanker/Tanker-Regular.ttf") format("ttf");
+        src: url("/public/fonts/tanker/Tanker-Regular.ttf");
     }
     @font-face {
         font-family: GeneralSans;
-        src: url("/public/fonts/generalSans/GeneralSans-Light.ttf") format("ttf");
+        src: url("/public/fonts/generalSans/GeneralSans-Light.ttf");
     }
 }
