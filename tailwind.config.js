@@ -22,9 +22,9 @@ theme:
     { 
         fontFamily: 
         { 
-            tanker: ['Tanker', 'sans-serif'], 
-            generalSans: ['GeneralSans', 'sans-serif'], 
-            gambetta: ['Gambetta', 'serif'], 
+            tanker: ['Tanker', ], 
+            generalSans: ['GeneralSans', ], 
+            gambetta: ['Gambetta', ], 
         }, 
     }, 
 }, 

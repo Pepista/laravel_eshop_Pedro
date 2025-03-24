@@ -2,3 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 @import "./fonts.css";
+
+@layer base {
+    body {
+    font-family: 'Tanker', sans-serif;
+}
+}
+
+@layer base {
+    @font-face {
+        font-family: Gambetta-Light ;
+        src: url("/public/fonts/gambetta/Gambetta-Light.ttf") format("ttf");
+    }
+    @font-face {
+        font-family: Tanker;
+        src: url("/public/fonts/tanker/Tanker-Regular.ttf") format("ttf");
+    }
+    @font-face {
+        font-family: GeneralSans;
+        src: url("/public/fonts/generalSans/GeneralSans-Light.ttf") format("ttf");
+    }
+}

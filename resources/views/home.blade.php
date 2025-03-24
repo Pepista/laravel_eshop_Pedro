@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Hero Section with Image and Gradient -->
-<div class="relative h-screen mt-20 bg-gradient-to-b from-indigo-700 to-indigo-900">
+<div class="relative h-screen mt-20 bg-gradient-to-b from-indigo-700 to-indigo-900 font-tanker">
     <img src="https://imgs.search.brave.com/ko2Q7ZOGLlqvLvF_YRANMCfq0u33Z5RmFO9DCe4WCQw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS81/YTllZTY0MTZlOTBk/MjAwMDFiMjAwMzgv/NjI4OWYwYmZhOTIw/YTk1OGYyYjQxNmY3/X2JsYWNrLWdyYWRp/ZW50LnBuZw" alt="Vítejte" class="object-cover w-full h-full opacity-70">
     <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-50"></div>
     <div class="flex items-center justify-center h-full text-center">
