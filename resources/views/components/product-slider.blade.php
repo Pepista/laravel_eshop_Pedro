@@ -1,7 +1,7 @@
 <div class="py-16 bg-gray-100">
     <h2 class="text-4xl font-semibold text-center text-gray-800 mb-12">Naše Produkty</h2>
     <div class="overflow-x-auto mt-8">
-        <div class="flex space-x-6 gap-6 overflow-x-scroll pb-8">
+        <div class="flex space-x-6 gap-6 overflow-x-scroll pb-8 text-black">
             @foreach($products as $product)
                 <div class="flex-shrink-0 w-64 md:w-72 lg:w-80 h-auto">
                     <div class="bg-white shadow-lg rounded-lg overflow-hidden transition-all transform hover:scale-102 hover:shadow-xl h-full">

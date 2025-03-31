@@ -2,41 +2,35 @@
 
 @section('content')
 
-<!-- Hero Section with Image and Gradient -->
-<div class="relative h-screen mt-20 bg-gradient-to-b from-indigo-700 to-indigo-900 font-gambetta">
-    <img src="https://imgs.search.brave.com/ko2Q7ZOGLlqvLvF_YRANMCfq0u33Z5RmFO9DCe4WCQw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS81/YTllZTY0MTZlOTBk/MjAwMDFiMjAwMzgv/NjI4OWYwYmZhOTIw/YTk1OGYyYjQxNmY3/X2JsYWNrLWdyYWRp/ZW50LnBuZw" alt="Vítejte" class="object-cover w-full h-full opacity-70">
-    <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-50"></div>
-    <div class="flex items-center justify-center h-full text-center">
-        
-    </div>
-</div>
+<div class="bg-gradient-to-b from-green-700 to-green-900">
 
+<!-- Hero Section with Company Name and Why Choose Us Section combined -->
+<div class="py-16 text-center font-tanker">
+    <!-- Název firmy -->
+    <h1 class="text-7xl  text-white mt-20 ">Pazuzu shop</h1>
 
-
-
-<!-- Why Choose Us Section -->
-<div class="py-16 bg-gray-50 text-center">
-    <h2 class="font-gambetta text-4xl font-semibold text-gray-800">Proč nakupovat u nás?</h2>
+    <!-- Why Choose Us Section -->
+    <h2 class="font-gambetta text-4xl  text-gray-800 mt-20">Proč nakupovat u nás?</h2>
     <p class="mt-4 text-lg text-gray-600">Nabízíme nejlepší produkty za nejlepší ceny!</p>
     <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         <!-- Rychlá Doprava -->
-        <div class="bg-white shadow-xl rounded-lg p-8 transform hover:scale-105 transition-transform duration-300 relative">
+        <div class="bg-white shadow-xl rounded-lg p-8 transform hover:scale-105 transition-transform duration-300 relative text-black">
             <div class="flex flex-col items-center justify-center space-y-4">
-                <h3 class="text-xl font-semibold text-gray-800">Rychlá Doprava</h3>
+                <h3 class="text-xl text-gray-800">Rychlá Doprava</h3>
                 <x-heroicon-o-truck height="80px" class="truck-icon my-4"/>
                 <p class="text-gray-600">Zaručujeme rychlé dodání vašich objednávek.</p>
             </div>
         </div>
         <!-- Kvalitní Produkty -->
-        <div class="bg-white shadow-xl rounded-lg p-8 transform hover:scale-105 transition-transform duration-300">
+        <div class="bg-white shadow-xl rounded-lg p-8 transform hover:scale-105 transition-transform duration-300 text-black">
             <div class="flex flex-col items-center justify-center space-y-4">
-                <h3 class="text-xl font-semibold text-gray-800">Kvalitní Produkty</h3>
+                <h3 class="text-xl  text-gray-800">Kvalitní Produkty</h3>
                 <x-iconsax-bro-sidebar-right height="80px" class="my-4"/>
                 <p class="text-gray-600">Naše produkty procházejí důkladným výběrem kvality.</p>
             </div>
         </div>
         <!-- Zákaznická Podpora -->
-        <div class="bg-white shadow-xl rounded-lg p-8 transform hover:scale-105 transition-transform duration-300">
+        <div class="bg-white shadow-xl rounded-lg p-8 transform hover:scale-105 transition-transform duration-300 text-black">
             <div class="flex flex-col items-center justify-center space-y-4">
                 <h3 class="text-xl font-semibold text-gray-800">Zákaznická Podpora</h3>
                 <x-gmdi-support-agent-o height="80px" class="my-4"/>
@@ -81,3 +75,5 @@
     });
 </script>
 @endpush
+
+</div>
