@@ -92,12 +92,12 @@
         <main class="content-wrapper">
             @yield('content')
         </main>
-        <div style="display: flex; flex-direction: column; height: 100vh; margin: 0;">
-            <div style="flex: 1;">
+        
+            
                 <!-- Main content goes here -->
-            </div>
+            
             @include('components.footer')
-        </div>
+        
         
         
     </div>

@@ -27,12 +27,12 @@
                     </thead>
                     <tbody>
                         @foreach(session('cart') as $id => $item)
-                            <tr class="border-b border-gray-200 hover:bg-gray-100 text-black">
-                                <td class="px-6 py-4 text-sm font-medium">{{ $item['name'] }}</td>
-                                <td class="px-6 py-4 text-sm">${{ $item['price'] }}</td>
-                                <td class="px-6 py-4 text-sm">{{ $item['quantity'] }}</td>
-                                <td class="px-6 py-4 text-sm">${{ number_format($item['price'] * $item['quantity'], 2) }}</td>
-                                <td class="px-6 py-4 text-sm">
+                            <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                <td class="px-6 py-4 text-sm font-medium text-black">{{ $item['name'] }}</td>
+                                <td class="px-6 py-4 text-sm text-black">${{ $item['price'] }}</td>
+                                <td class="px-6 py-4 text-sm text-black">{{ $item['quantity'] }}</td>
+                                <td class="px-6 py-4 text-sm text-black">${{ number_format($item['price'] * $item['quantity'], 2) }}</td>
+                                <td class="px-6 py-4 text-sm text-black">
                                     <form action="{{ route('cart.remove', $id) }}" method="POST" class="inline-block">
                                         @csrf
                                         @method('DELETE')
@@ -139,5 +139,24 @@
 
     .btn-checkout {
         color: white;
+    }
+
+    /* Footer Style */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .container {
+        flex-grow: 1; /* Allow the container to take up available space */
+    }
+
+    footer {
+        flex-shrink: 0;
+        background-color: #f8fafc;
+        padding: 1rem 0;
+        text-align: center;
+        margin-top: auto;
     }
 </style>

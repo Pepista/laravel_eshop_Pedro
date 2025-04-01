@@ -16,4 +16,11 @@
         </div>
         <button type="submit" class="bg-indigo-600 text-white rounded-md px-6 py-3 hover:bg-indigo-700 transition duration-200 w-full">Odeslat</button>
     </form>
+    <!-- Big Box Section -->
+<div class="bg-gray-200 py-32 mt-12">
+    
+</div>
+
+        <!-- Box content here -->
+    </div>
 </div>

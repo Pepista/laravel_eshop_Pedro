@@ -5,7 +5,7 @@
 <div class="bg-gradient-to-b from-green-700 to-green-900">
 
 <!-- Hero Section with Company Name and Why Choose Us Section combined -->
-<div class="py-16 text-center font-tanker">
+<div class="py-16 text-center font-bold">
     <!-- Název firmy -->
     <h1 class="text-7xl  text-white mt-20 ">Pazuzu shop</h1>
 
@@ -45,6 +45,8 @@
 
 <!-- Contact Form Section -->
 @include('components.contact-form')
+
+
 
 @endsection
 
