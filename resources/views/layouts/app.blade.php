@@ -1,3 +1,6 @@
+@stack('scripts')
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@latest"></script>
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -25,6 +28,8 @@
             height: 100%;
             font-family: 'Arial', sans-serif;
             overflow: auto; /* Allow scrolling */
+            background: linear-gradient(to bottom, darkgrey, black);
+
         }
 
         /* Black overlay and transition */

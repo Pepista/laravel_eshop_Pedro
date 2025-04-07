@@ -9,6 +9,10 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 
+Route::get('/model-viewer', function () {
+    return view('model');
+});
+
 Route::post('/cart/add/{productId}', [CartController::class, 'add'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::delete('/cart/remove/{productId}', [CartController::class, 'remove'])->name('cart.remove');

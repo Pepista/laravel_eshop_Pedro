@@ -2,15 +2,13 @@
 
 @section('content')
 
-<div class="bg-gradient-to-b from-green-700 to-green-900">
-
 <!-- Hero Section with Company Name and Why Choose Us Section combined -->
 <div class="py-16 text-center font-bold">
     <!-- Název firmy -->
     <h1 class="text-7xl  text-white mt-20 ">Pazuzu shop</h1>
 
     <!-- Why Choose Us Section -->
-    <h2 class="font-gambetta text-4xl  text-gray-800 mt-20">Proč nakupovat u nás?</h2>
+    <h2 class="text-4xl  text-gray-800 mt-20">Proč nakupovat u nás?</h2>
     <p class="mt-4 text-lg text-gray-600">Nabízíme nejlepší produkty za nejlepší ceny!</p>
     <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
         <!-- Rychlá Doprava -->
@@ -40,13 +38,24 @@
     </div>
 </div>
 
+<!-- 3D Model Viewer Section -->
+<div class="relative w-full h-screen flex justify-center items-center">
+    <model-viewer 
+        id="girlModelViewer"
+        src="{{ asset('models/girl_model.glb') }}" 
+        alt="Girl 3D Model" 
+        auto-rotate
+        camera-controls
+        disable-zoom
+        style="width: 80vw; height: 80vh; background: transparent; border-radius: 10px;">
+    </model-viewer>
+</div>
+
 <!-- Products Horizontal Scroll Section -->
 @include('components.product-slider');
 
 <!-- Contact Form Section -->
 @include('components.contact-form')
-
-
 
 @endsection
 
@@ -75,7 +84,16 @@
         },
         loop: true, // Enable loop effect
     });
+
+    // Add Scroll-based rotation effect to model
+    let modelViewer = document.getElementById('girlModelViewer');
+
+    window.addEventListener('scroll', () => {
+        // Get the scroll position
+        const scrollPosition = window.scrollY;
+        // Adjust the rotation of the 3D model based on the scroll position (faster rotation)
+        const rotation = scrollPosition * 0.3;  // Increased multiplier for faster rotation
+        modelViewer.setAttribute('rotation', `${rotation}deg 0deg 0deg`);
+    });
 </script>
 @endpush
-
-</div>
