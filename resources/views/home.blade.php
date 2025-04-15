@@ -5,7 +5,7 @@
 <!-- Hero Section with Company Name and Why Choose Us Section combined -->
 <div class="py-16 text-center font-bold">
     <!-- Název firmy -->
-    <h1 class="text-7xl  text-white mt-20 ">Pazuzu shop</h1>
+    <h1 class="text-7xl  text-white mt-20 ">Gooners Paradise</h1>
 
     <!-- Why Choose Us Section -->
     <h2 class="text-4xl  text-gray-800 mt-20">Proč nakupovat u nás?</h2>
@@ -41,14 +41,15 @@
 <!-- 3D Model Viewer Section -->
 <div class="relative w-full h-screen flex justify-center items-center">
     <model-viewer 
-        id="girlModelViewer"
-        src="{{ asset('models/girl_model.glb') }}" 
-        alt="Girl 3D Model" 
-        auto-rotate
-        camera-controls
-        disable-zoom
-        style="width: 80vw; height: 80vh; background: transparent; border-radius: 10px;">
-    </model-viewer>
+    id="girlModelViewer"
+    src="{{ asset('models/rem_rezero.glb') }}" 
+    alt="Girl 3D Model" 
+    auto-rotate
+    camera-controls
+    disable-zoom
+    style="width: 80vw; height: 80vh; background: transparent; border-radius: 10px;">
+</model-viewer>
+
 </div>
 
 <!-- Products Horizontal Scroll Section -->
