@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container py-10 mx-auto max-w-6xl mt-16"> <!-- Added mt-16 here -->
+    <div class="container py-10 mx-auto max-w-6xl mt-16">
         <!-- Title -->
-        <h1 class="text-4xl font-semibold text-center text-gray-800 mb-8">Nákupní Košík</h1>
+        <h1 class="text-4xl font-semibold text-center text-white mb-8">Nákupní Košík</h1>
 
         <!-- Back to Products Button -->
         <div class="text-center mb-4 mt-8">
-            <a href="{{ route('products.index') }}" class="inline-block px-8 py-3 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 ease-in-out">
+            <a href="{{ route('products.index') }}" class="inline-block px-8 py-3 text-white bg-green-700 rounded-lg shadow-md hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-300 ease-in-out">
                 Zpět na produkty
             </a>
         </div>
 
         <!-- Check if Cart is Not Empty -->
         @if(session('cart') && count(session('cart')) > 0)
-            <div class="overflow-x-auto bg-white shadow-lg rounded-lg">
-                <table class="min-w-full table-auto text-gray-800">
-                    <thead class="bg-blue-600 text-white">
+            <div class="overflow-x-auto bg-gray-800 shadow-lg rounded-lg">
+                <table class="min-w-full table-auto text-white">
+                    <thead class="bg-green-700">
                         <tr>
                             <th class="px-6 py-4 text-left text-sm font-semibold">Produkt</th>
                             <th class="px-6 py-4 text-left text-sm font-semibold">Cena</th>
@@ -27,12 +27,12 @@
                     </thead>
                     <tbody>
                         @foreach(session('cart') as $id => $item)
-                            <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                <td class="px-6 py-4 text-sm font-medium text-black">{{ $item['name'] }}</td>
-                                <td class="px-6 py-4 text-sm text-black">${{ $item['price'] }}</td>
-                                <td class="px-6 py-4 text-sm text-black">{{ $item['quantity'] }}</td>
-                                <td class="px-6 py-4 text-sm text-black">${{ number_format($item['price'] * $item['quantity'], 2) }}</td>
-                                <td class="px-6 py-4 text-sm text-black">
+                            <tr class="border-b border-gray-700 hover:bg-gray-700">
+                                <td class="px-6 py-4 text-sm font-medium">{{ $item['name'] }}</td>
+                                <td class="px-6 py-4 text-sm">${{ $item['price'] }}</td>
+                                <td class="px-6 py-4 text-sm">{{ $item['quantity'] }}</td>
+                                <td class="px-6 py-4 text-sm">${{ number_format($item['price'] * $item['quantity'], 2) }}</td>
+                                <td class="px-6 py-4 text-sm">
                                     <form action="{{ route('cart.remove', $id) }}" method="POST" class="inline-block">
                                         @csrf
                                         @method('DELETE')
@@ -50,15 +50,15 @@
 
             <!-- Checkout Button -->
             <div class="mt-8 flex justify-between items-center">
-                <p class="text-lg font-semibold text-gray-800">
-                    Celková cena: <span class="text-xl font-bold text-gray-900">${{ number_format(array_sum(array_map(fn($item) => $item['price'] * $item['quantity'], session('cart'))), 2) }}</span>
+                <p class="text-lg font-semibold text-white">
+                    Celková cena: <span class="text-xl font-bold">${{ number_format(array_sum(array_map(fn($item) => $item['price'] * $item['quantity'], session('cart'))), 2) }}</span>
                 </p>
-                <a href="{{ route('checkout.index') }}" class="inline-block px-8 py-4 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-300 ease-in-out">
+                <a href="{{ route('checkout.index') }}" class="inline-block px-8 py-4 bg-green-800 text-white rounded-lg shadow-md hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition duration-300 ease-in-out">
                     Přejít k pokladně
                 </a>
             </div>
         @else
-            <p class="text-center text-gray-800 text-xl mt-6">Váš košík je prázdný. Prohlédněte si naše produkty a přidejte něco do košíku!</p>
+            <p class="text-center text-white text-xl mt-6">Váš košík je prázdný. Prohlédněte si naše produkty a přidejte něco do košíku!</p>
         @endif
     </div>
 @endsection
@@ -75,11 +75,11 @@
         padding: 1rem;
         text-align: left;
         font-size: 0.875rem;
-        color: #4B5563; /* Dark Gray */
+        color: #E5E7EB; /* Light gray for text */
     }
 
     th {
-        background-color: #3B82F6; /* Blue */
+        background-color: #064E3B; /* Dark Green */
         color: white;
         font-weight: 600;
     }
@@ -89,7 +89,7 @@
     }
 
     tr:hover {
-        background-color: #f9fafb; /* Light Gray */
+        background-color: #4B5563; /* Darker Gray */
     }
 
     .btn-remove {
@@ -108,7 +108,7 @@
         font-weight: 600;
         font-size: 1.25rem;
         text-align: right;
-        color: #4B5563;
+        color: #E5E7EB;
     }
 
     /* Button Styles */
@@ -126,7 +126,7 @@
     }
 
     .btn-back {
-        background-color: #2563EB; /* Blue */
+        background-color: #064E3B; /* Dark Green */
     }
 
     .btn-checkout {
@@ -149,12 +149,12 @@
     }
 
     .container {
-        flex-grow: 1; /* Allow the container to take up available space */
+        flex-grow: 1;
     }
 
     footer {
         flex-shrink: 0;
-        background-color: #f8fafc;
+        background-color: #1F2937; /* Darker Gray */
         padding: 1rem 0;
         text-align: center;
         margin-top: auto;

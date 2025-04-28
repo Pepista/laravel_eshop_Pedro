@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-20 px-4 sm:px-6 lg:px-8 mx-auto relative top-11">
+<div class="container mt-20 px-4 sm:px-6 lg:px-8 mx-auto relative top-11 text-black">
     <!-- Product Details -->
     <div class="product-details bg-white p-10 shadow-xl rounded-lg mx-auto w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mt-20 relative">
         <!-- Back Button -->
